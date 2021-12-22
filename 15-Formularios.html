@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!-- Inicio del Documento HTML  -->
+<html lang="es">
+  <!-- Head: Representa coleccion de datos del documento los cuales
+se les pasan al navegador para que interprete nuestra pagina web -->
+
+  <head>
+    <!-- Conjunto de caracteres latino para uso de tildes -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORMULARIOS</title>
+  </head>
+
+  <!-- 
+      La estructura basica de un formulario se compone de 4 elementos 
+
+    FORM:       Es la etiqueta que engloba nuestro 
+                formulario
+    LABEL:      Sirve para escribir el nombre del campo a 
+                rellenar
+    INPUT:      Sirve para crear un campo que permitira al 
+                usuario interactuar
+    BUTTON:     Crea un boton que permitira enviar el 
+                formulario
+
+    TIPOS DE INPUT:
+    https://developer.mozilla.org/es/docs/Web/HTML/Element/input
+
+    BUTTON:     Se comprta igual que un boton BUTTON
+    SUBMIT:     Se usa para enviar el formulario
+    HIDDEN:     Campo oculto, puede contener valor pero no
+                se mostrara
+    DATE:       Se usa para introducir una fecha
+    DATETIME:   Obsoleto
+    DATETIME-LOCAL: Fecha y hora, no funciona en firefox
+    MONTH:      Se usa para introducir un mes
+    TIME:       Se usa para introducir una hora
+    WEEK:       Se usa para introducir numero de semana al 
+                año
+    COLOR:      Se Usa para especificar un color
+    NUMBER:     Se usa para valores numericos
+    RANGE:      Se usa para establecer un rango
+    RESET:      Se usa para resetear un formulario
+    TEXT:       Valor por defecto
+
+    SEARCH:     Se usa para las barras de busqueda
+    TEL:        Se usa para introducir numeros telefonicos
+    EMAIL:      Se usa para introducir un Email
+    PASSWORD:   Se usa para contraseñas
+    URL:        Se usa para introducir URLs
+
+    Los siguientes elementos deben ir dentro de la etiqueta OPTION: 
+
+    RADIO:      Se usa para seleccionar una unica opcion de 
+                una lista de opciones relacionadas
+    CHECKBOX:   Se usa para seleccionar varias opciones de 
+                una lista de opciones relacionadas
+    SELECT:     Crea una lista de opciones donde podemos 
+                seleccionar una o varias opciones
+    
+    Si tenemos muchas opciones podemos ordenarlas por categorias a traves de la etiqueta OPTGROUP con el atributo LABEL para nombrar cada categoria
+
+    DATALIST:   Es un SELECT con filtro de busqueda similares a los select con la 
+                ventaja de que incluyen un filtro para buscar de forma mas sencilla
+
+    FIELDSET:   Se usa para agrupar elementos dentro de un 
+                formulario
+    LEGEND:     Representa una etiqueta para el contenido del FIELDSET
+    FILE:       Este input se usa para cargar archivos y enviarlos desde un formulario
+    METER:      Representa un valor dentro de un rango conocido
+    PROGRESS:   Representa el progreso de una tarea
+    TEXTAREA:   Se usa para introducir texto en un 
+                formulario
+    =============================================
+    ATRIBUTOS DE LOS FORMULARIOS
+
+    PLACEHOLDER:  Muestra un mensaje al usuario para que sepa que introducir 
+    REQUIRED:     Hace que un campo sea obligatorio
+    READONLY:     Hace que un campo sea de solo lectura
+    MIN ó MAX:    Establece el valor minimo o maximo de un campo numerico
+    MAXLENGHT:    Establece la cantidad maxima de caracteres en un campo
+    SELECTED:     Equivale a CHECKED en los SELECT, sirve para establecer una opcion 
+                  por defecto
+    DISABLED:     Desactiva el campo no se podra escribir 
+                  adicional si el campo tiene este atributo activo no se enviara en el formulario
+    AUTOFOCUS:    Para poner el foco por defecto al cargar el formulario
+    
+
+   -->
+
+  <body>
+    <header></header>
+    <main>
+      <!-- 
+          El ACTION  pertenece a la etiqueta FORM y se usa para indicarle al navegador hacia donde se va a enviar el formulario
+
+          El FOR se usa para enlazar un LABEL con un INPUT atravez de la etiqueta ID
+
+          VALUE permite visualizar algun valor en el elemento
+        -->
+      <form>
+        <div>
+          <label for="nombre">Nombre</label>
+          <input id="nombre" type="button" value="input" />
+          <input type="date" />
+          <input type="time" />
+          <input type="datetime-local" />
+          <input type="month" />
+          <input type="week" />
+          <button>Enviar formulario</button>
+        </div>
+        <div><label for="search"> search</label>
+        <input type="search" id="search" /></div>
+        <div></div><label for="tel"> tel</label>
+        <input type="tel" id="tel"/></div>
+        <div></div><label for="email"> email</label>
+        <input type="email" id="email" /></div>
+        <div></div><label for="password">password </label>
+        <input type="password" id="password" /></div>
+        <div></div><label for="url">url </label>
+        <input type="url" id="url" /></div>
+        <div>
+            <input type="color">
+            <input type="number">
+            <input type="range" step="10" min="0" max="30">
+            <input type="reset">
+            <input type="text">
+        </div>
+        <div>
+          <!--  RADIO -->
+          <!-- 
+            El atributo NAME permite agrupar los INPUT RADIO para que solo se permita seleccionar uno de un grupo 
+            El Atributo VALUE es obligatorio y sirve para indicarle al formulario que opcion se selecciono y el valor a enviar
+            Si queremos que un input salga marcado por defecto tenemos el atributo CHECKED
+          -->
+          <h2>Elementos seleccionables</h2>
+          <h3>Genero</h3>
+          <label for="">Masculino</label>
+          <input type="radio" name="Genero" value="Masculino">
+          <label for="">Femenino</label>
+          <input type="radio" name="Genero" value="Femenino" checked>
+          <label for="">Otro</label>
+          <input type="radio" name="Genero" value="Otro" >
+        </div>
+        <div>
+          <!-- CHECKBOX -->
+          <!-- Al igual que los CHECKBOX se necesita la etiqueta VALUE y NAME y CHECKED que es opcional-->
+          <H2>LENGUAJES QUE CONOCES</H2>
+          <label for="html">HTML</label>
+          <input type="checkbox" id="html" name="lenguajes" value="html">
+          <label for="css">CSS</label>
+          <input type="checkbox" id="css"name="lenguajes" value="css">
+          <label for="javascript">JavaScript</label>
+          <input type="checkbox" id="htjavascriptml"name="lenguajes" value="JavaScript">
+        </div>
+        <div>
+          <!-- SELECT -->
+          <!-- 
+            Si queremos que se puedan seleccionar varios elementos usaremos la etiqueta MULTIPLE 
+            OPTGROUP nos sirve para ordenar las opciones por categorias
+          -->
+          <SELECt name="Animales" multiple>
+            <optgroup label="4 patas">
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
+            <option value="hamster">Hamster</option>
+            <option value="conejo">Conejo</option>
+            </optgroup>
+            <optgroup label="Aves">
+            <option value="loro">Loro</option>
+            <option value="canario">Canario</option>
+            </optgroup>
+            <optgroup label="Otros">
+            <option value="serpiente">Serpiente</option>
+            <option value="tarantula">Tarantula</option>
+            </optgroup>
+          </SELECt>
+        </div>
+        <div>
+          <!-- DATALIST -->
+          <!-- 
+            LIST en un input se usa para indicarle que se va a trabajar con una lista
+            Dentro del DATALIST iran los OPTION y se puede dejar solo las etiquetas VALUE
+           -->
+          <input type="list" name="" id="" list="mascotas">
+          <datalist id="mascotas">
+            <option value="perro"></option>
+            <option value="gato"></option>
+            <option value="hamster"></option>
+            <option value="conejo"></option>
+            <option value="loro"></option>
+            <option value="canario"></option>
+            <option value="serpiente"></option>
+            <option value="tarantula"></option>
+          </datalist>
+        </div>
+        <div>
+          <!-- FIELDSET -->
+          <!-- 
+            FIELDSET practicamente es un rectangulo que rodea las etiquetas
+            LEGEND es el titulo del rectangulo
+           -->
+          <fieldset>
+            <legend>DATOS PERSONALES</legend>
+          <label for="name">Nombre</label>
+          <input type="text" name="" id="name">
+          <label for="surname">Apellidos</label>
+          <input type="text" name="" id="surname">
+          </fieldset>
+          <input type="file" name="" id="">
+          <!-- METER -->
+          <!-- 
+            es una barra de progreso 
+            LOW:    Esta etiqueta predetermina un valor minimo para que por defecto nos 
+                    represente de un color amarillo
+            HIGHT:  Esta etiqueta nos predetermina apartir de que valor es alto
+            OPTMUN: Esta etiqueta nos predetermina cual seria el valor optimo
+           -->
+           <label for="fuel">Combustible</label>
+          <meter id="fuel" min="0" max="100" value="80" low="30" high="70" optimum="50"></meter>
+          <label for="task">TAREAS</label>
+          <progress id="task" max="100" value="80" ></progress>
+          <label for="descripcion">Descripcion</label>
+          <!-- TEXT AREA -->
+          <!-- COLS define el ancho y ROWS lo alto -->
+          <textarea name="" id="descripcion" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+          <!-- ATRIBUTOS DE LOS CAMPOS -->
+          <input type="text" name="" id="" placeholder="Esto es un placeholder con REQUIRED" required>
+          <input type="text" name="" id="" value="solo lectura" readonly>
+          <input type="text" name="" id="" value="Disable" disabled>
+          <input type="number" name="" id="" min="5" max="10" autofocus>
+          <input type="text" name="" id="" minlength="3" maxlength="5" required selected> 
+
+
+        </div>
+      
+      </form>
+    </main>
+    <footer>
+      <!--PIE DE PAGINA  -->
+      CURSO HTML5
+    </footer>
+  </body>
+</html>

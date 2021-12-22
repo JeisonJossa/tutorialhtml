@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Inicio del Documento HTML  -->
+<html lang="es">
+  <!-- Head: Representa coleccion de datos del documento los cuales
+se les pasan al navegador para que interprete nuestra pagina web -->
+
+  <head>
+    <!-- Conjunto de caracteres latino para uso de tildes -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GET O POST</title>
+  </head>
+  <!--
+    GET:    Es el metodo que se ejecuta cuando entramos a 
+            una pagina y es el envio de formularios a traves de la URL si al enviar el formulario la pagina del ACTION no funciona nos generara un error visual el cual nos indica la pagina que no existe
+    POST:   Este metodo es el envio de formularios atravez 
+            de programacion si al enviar el formulario la pagina del ACTION no funciona nos generara HTTP ERROR 405
+    ACTION: En este atributo se coloca la pagina o url a   
+            donde se enviara el formulario
+    
+
+-->
+
+  <!--Representa todo el contenido de nuestra pagina WEB  -->
+  <body>
+    <header>
+      <h1>GET O POST</h1>
+    </header>
+    <main>
+      <form action="eviar.html" method="GET">
+        <label for="name">nombre</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" />
+      </form>
+      <form action="eviar.html" method="POST">
+        <label for="name">nombre</label>
+        <input type="text" name="name" id="name" />
+        <input type="submit" />
+      </form>
+    </main>
+    <footer>FOOTER</footer>
+  </body>
+</html>

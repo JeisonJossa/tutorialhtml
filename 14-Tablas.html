@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- Inicio del Documento HTML  -->
+<html lang="es">
+  <!-- Head: Representa coleccion de datos del documento los cuales
+se les pasan al navegador para que interprete nuestra pagina web -->
+
+  <head>
+    <!-- Conjunto de caracteres latino para uso de tildes -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style para dar color a las columnas y podamos visualizar mejor la seleccion de columnas  
+    IMPORTANTE: PARA DAR ESTILO A UNA TABLA SE USA CSS NO HTML
+    -->
+    <style>
+      col:nth-child(1) {
+        background-color: burlywood;
+      }
+      col:nth-child(2) {
+        background-color: rgb(88, 228, 162);
+      }
+    </style>
+    <title>TABLAS</title>
+  </head>
+  <!-- 
+      Las tablas en HTML sirven para mostrar contenido tabulado
+
+      La estructura basica de una tabla se compone de:
+
+      TABLE:    Etiqueta que encierra una tabla
+      TR:       Table Row etiqueta que contruye un fila
+      TD:       Table Data etiqueta que contruye una celda
+
+      Truco: El numero de celdas dentro de un TR establecera el numero de columnas de la tabla
+
+      Los titulos de las tablas se establecen con la etiqueta CAPTION, es una etiqueta opcional y segun la especificacion esa etiqueta se coloca justo despues de la etiqueta TABLE
+
+      Las cabeceras de las tablas se establecen con la etiqueta THEAD
+
+      Dentro tendremos una etiqueta TR normal, pero en el caso de que las celdas, las estableceremos con la etiqueta TH en lugar de TD
+      El contenido de la tabla debe ir dentro de una etiqueta TBODY para representar el cuerpo de la tabla 
+
+      De forma opcional podemos colocar un TFOOT a la tabla para establecer un pie de tabla, esto es algo que algunas tablas tienen como suma de cantidades o total
+
+      Para hacer que las celdas ocupen mas de una fila o mas de una columna tenemos dos atributos:
+
+      ROWSPAN:      Sirve para que una celda ocupe mas de 
+                    una fila, el valor por defecto es 1
+      COLSPAN:      Sirve para que una celda ocupe mas de 
+                    una columna, el valor por defecto es 1
+    
+    Cuando necesitamos seleccionar una columna, tenemos la etiqueta COLGROUP, que nos permite seleccionar una columna en concreto.
+    Dentro pondremos tantas etiquetas COL como columnas tengamos, cada etiqueta COL equivaldra a una columna siguiendo el mismo orden que tienen en la tabla 
+
+    Si necesitamos que una etiqueta COL agrupe mas de una columna, tenemos el atributo SPAN que funciona exactamente igual que ROWSPAN y COLSPAN
+   -->
+  <body>
+    <header>
+      <h1>TABLAS</h1>
+    </header>
+
+    <main>
+      <table>
+        <!-- TITULO DE LA TABLA -->
+        <caption>
+          HORARIO DE CLASES
+        </caption>
+        <!-- COLGROUP PARA SELECCIONAR COLUMNAS -->
+        <colgroup>
+          <col />
+          <col span="4" />
+        </colgroup>
+        <!-- TITULO DE LAS COLUMNAS -->
+        <thead>
+          <tr>
+            <th></th>
+            <th>L</th>
+            <th>M</th>
+            <th>X</th>
+            <th>J</th>
+            <th>V</th>
+          </tr>
+        </thead>
+        <!-- CONTENIDO DE LA TABLA -->
+        <tbody>
+          <tr>
+            <td>8:30 - 9:30</td>
+            <td rowspan="2">matematicas</td>
+            <td>matematicas</td>
+            <td>sociales</td>
+            <td>matematicas</td>
+            <td>matematicas</td>
+          </tr>
+          <tr>
+            <td>9:30 - 10:30</td>
+
+            <td>Lengua</td>
+            <td>Matematicas</td>
+            <td>Ciencia</td>
+            <td>Lengua</td>
+          </tr>
+          <tr>
+            <td>10:30 - 11:30</td>
+            <td>Educacion Fisica</td>
+            <td>Ciencias</td>
+            <td>Lengua</td>
+            <td>Lenguaencia</td>
+            <td>Educacion Fisica</td>
+          </tr>
+          <tr>
+            <td>11:30 - 12:30</td>
+            <td colspan="5">RECREO</td>
+          </tr>
+          <tr>
+            <td>12:30 - 13:30</td>
+            <td>Ingles</td>
+            <td>Sociales</td>
+            <td>Ingles</td>
+            <td rowspan="3">Tutoria</td>
+            <td rowspan="3">Ingles</td>
+          </tr>
+          <tr>
+            <td>14:30 - 15:30</td>
+            <td>Musica</td>
+            <td>Educacion Fisica</td>
+            <td>Reliion</td>
+          </tr>
+          <tr>
+            <td>14:30 - 15:30</td>
+            <td>Musica</td>
+            <td>Educacion Fisica</td>
+            <td>Reliion</td>
+          </tr>
+        </tbody>
+        <!-- FINALIZA EL CONTENIDO DE LA TABLA -->
+        <!-- PIE DE TABLA -->
+        <tfoot>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="4">totalasignaturas</td>
+            <td colspan="2">12</td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+
+    <footer>Footer</footer>
+  </body>
+</html>

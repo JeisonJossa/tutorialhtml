@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Inicio del Documento HTML  -->
+<html lang="es">
+<!-- Head: Representa coleccion de datos del documento los cuales
+se les pasan al navegador para que interprete nuestra pagina web -->
+
+<head>
+    <!-- Conjunto de caracteres latino para uso de tildes -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+
+</head>
+<!-- 
+    RUTAS ABSOLUTAS:
+    Tienen protocolo, http o https y son unicas en la red se suelen utilizar para rutas externas
+
+    RUTAS RELATIVAS:
+    Pueden ser realitvas al punto donde nos encontramos o realivas a la raiz del proyecto
+
+    No usan protocolo
+
+    Si el recurso se encuentra al mismo nivel (en la misma carpeta) pondremos unicamente el nombre del archivo
+
+    Si necesitamos salir de la carpeta actual usaremos ../ y se pone uno por cada nivel(carpeta) de la que queramos salir
+
+    ATRIBUTOS DE LOS ENLACES
+    TARGET:         Define donde se abrira el recurso solicitado. por norma general siempre 
+                    que useis rutas absolutas pomer como valor "_blank" para que se abra en una pestaña nueva
+    DOWNLOAD:       Atributo booleano, sirve para descargar el recurso solicitado el recurso 
+                    debe estar en el mismo servidor
+
+ -->
+<body>
+    <header>
+        <h1>RUTAS</h1>
+    </header>
+    <main>
+        <!-- ruta absoluta -->
+        <a href="https://www.google.com" target="_blank">Ir a google</a>
+        <!-- ruta relativa -->
+        <a href="0-Index.html">Ir a index</a>
+        <a href="/ruta_relativa/1-TitulosyParrafos.html">Ir a parrafo</a>
+        <a href="0-Index.html" download="P.sql">DOWNLOAD</a>
+    </main>
+
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>

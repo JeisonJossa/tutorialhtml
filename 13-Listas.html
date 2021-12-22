@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Inicio del Documento HTML  -->
+<html lang="es">
+  <!-- Head: Representa coleccion de datos del documento los cuales
+se les pasan al navegador para que interprete nuestra pagina web -->
+
+  <head>
+    <!-- Conjunto de caracteres latino para uso de tildes -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LISTAS</title>
+  </head>
+  <!-- 
+    Las listas en html sirven para listar contenido. En funcion del tipo de contenido de nuestra lista tenemos tres tipos de listas:
+
+    Cada elemento de la lista se representa con la etiqueta <li>, tanto en las UL como OL
+
+    UL:     Unordered List, se utilizan cuando el orden 
+            de los elementos no influye(Lista de la compra)
+    OL:     Ordered List, Se usan cuando el order de 
+            los elementos es importante (TOP 10)
+    DL:     Definition List, Se usan para hacer una 
+            lista de definiciones(Diccionario)
+
+    Cada elemento de una lista de definicion lleva 2 etiquetas:
+        DT:     Definition Term, El termino que vamos a 
+                definir
+        DD:     Definition Description, La descripcion 
+                del termino
+
+    Se Pueden construir listas anidadas teniendo en uno de lo LI otro UL/OL segun sea necesario
+
+    ATRIBUTOS DE LAS LISTAS:
+    OL:     Type:   Estilo de numeracion (1,A,a,I,i)
+            Start:  Inicio de la secuencia (un numero)
+    UL:     Type:   Estilo de los items (Disq,Square,Circle)
+   -->
+  <body>
+    <header>
+      <h1>LISTAS</h1>
+    </header>
+
+    <main>
+      <!-- LISTA DESORDENADA SE REPRESENTA CON CIRCULO YA QUE NO IMPORTA EL ORDEN -->
+      <h2>lista de la compra</h2>
+      <ul type="square">
+        <li>Pan</li>
+        <li>Huevos</li>
+        <li>Leche</li>
+      </ul>
+      <!-- TODOS LOS MENUS DE NAVEGACION SE CONSTRUYEN DE ESTA MANERA ESTA ES LA SEMANTICA CORRECTA-->
+      <h2>MENU UL</h2>
+      <nav>
+        <ul>
+          <li><a href="#publicacion1">PUBLICACION 1</a></li>
+          <li><a href="#publicacion2">PUBLICACION 2</a></li>
+          <li><a href="#publicacion3">PUBLICACION 3</a></li>
+        </ul>
+      </nav>
+      <h2>LISTA OL</h2>
+      <h3>ORDEN DE APRENDIZAJE DESARRLLO WEB</h3>
+      <!-- LISTA ORDENADA SE REPRESENTA CON NUMEROS YA QUE EL ORDEN EN ESTA CASO SI IMPORTA -->
+      <ol type="1" start="10">
+        <li>Html</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ol>
+      <h2>LISTAS DL</h2>
+      <h3>Lenguajes para el desarrollo web</h3>
+      <dl>
+        <dt>HTML</dt>
+        <dd>
+          Hypertext Markup Languague: Es un lenguaje de marcado que se usa para
+          estructurar datos en una pagina web
+        </dd>
+
+        <dt>CSS</dt>
+        <dd>
+          Cascade Style Sheets: Es un lenguaje de diseño que se utiliza para dar
+          estilos al HTML
+        </dd>
+
+        <dt>JavaScrip</dt>
+        <dd>
+          Es un Lenguaje de programacion para dar interactividad a un sitio WEB
+        </dd>
+      </dl>
+
+      <h2>LISTAS ANIDADAS</h2>
+      <h3>UL dentro de un OL</h3>
+      <ol>
+        <li>
+          HTML
+          <ul>
+            <li>Estructura</li>
+            <li>Sintaxis</li>
+            <li>Etiquetas</li>
+          </ul>
+        </li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ol>
+    </main>
+
+    <footer>Footer</footer>
+  </body>
+</html>

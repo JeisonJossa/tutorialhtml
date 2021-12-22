@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Inicio del Documento HTML  -->
+<html lang="es">
+<!-- Head: Representa coleccion de datos del documento los cuales
+se les pasan al navegador para que interprete nuestra pagina web -->
+
+<head>
+    <!-- Conjunto de caracteres latino para uso de tildes -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+
+    <style>
+        .parrafo1{
+            color: aqua;
+        }
+    </style>
+</head>
+<!-- 
+    Algunos atributos globales que estan disponibles para la mayoria de etiquetas en HTML
+
+    CLASS:      Se usa para dar estilos através de CSS
+    ID:         Es un identificador unico que se utiliza para seleccionar el elemento de 
+                desde JS y para hacer navegacion através de anclas
+    TITLE:      Es un atributo que ayuda a la accesibilidad mostrando una descripcion
+                del elemento al que pertenece, aparece mensaje como TOOLTIP
+    DATA-:      Es un atributo que nos permite guardar un valor en la etiquera HTML    
+ -->
+<body>
+    <header>
+        <h1>ATRIBUTOS</h1>
+    </header>
+    <main>
+        <p class="Parrafo1">CLASS</p>
+        <p id="parrafo2">Identificador através de ID JS</p>
+        <p title="Este es un ejemplo del atributo TITLE">Título con Tooltip</p>
+        <p id="Id" data-d_ejemplo="Datos dataset">Data- pasados en la etiqueta</p>
+
+    </main>
+
+    <footer>
+        Footer
+    </footer>
+    <script>
+        const p = document.getElementById('parrafo2')
+        console.log(p.textContent)
+        const d = document.getElementById('Id')
+        console.log(d.dataset.d_ejemplo)
+    </script>
+</body>
+
+</html>

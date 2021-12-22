@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- Inicio del Documento HTML  -->
+<html lang="es">
+<!-- Head: Representa coleccion de datos del documento los cuales
+se les pasan al navegador para que interprete nuestra pagina web -->
+
+<head>
+    <!-- Conjunto de caracteres latino para uso de tildes -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        span{
+            color: cyan;
+        }
+    </style>
+    <title>Index</title>
+</head>
+
+<body>
+    <header>
+        <h1>ELEMENTOS DE LINEA</h1>
+    </header>
+    <!--  
+        Enfasis: Sirve para que el navegador entienda cuales son las frases o palabras mas importantes o prioritarias  
+
+        EM:         Enfasis o relevancia
+        STRONG:     Mas Enfasis mas relevancia que EM
+        SMALL:      Menos enfasis que el texto normal menos 
+                    relavancia
+        BR:         Forzar un salfo de linea
+        WBR:        Salto de linea si hiciera falta
+        TIME:       Se usa para representar un contexto de 
+                    Hora/Fecha
+        I:          Italic
+        B:          Bold
+        U:          Underline
+        SUP:        Superindice
+        SUB:        SubIndice
+        SPAN:       Es un contenedor de linea equivalente a 
+                    DIV se suele usar para encerrar palabras o pequeños textos y darles estilo atraves de CSS o localizarlos desde JavaScript semanticamente no significa nada
+        Q:          Es el equivalente a BLOCKQUTOE 
+                    significa quote por eso el de bloque se llama BLOCK, QUTOE sirve para poner citas pero en linea
+        CODE:       Sirve para encerrar codigo que queremos 
+                    representar visualmente suele ir unido con la etiqueta PRE
+
+        Entidades especiales en HTML - Codigo ASCII
+        https://ascii.cl/es/codigos-html.htm
+        -->
+    <main>
+        
+    <p><em>El dinero</em> o <strong> la salud</strong></p>
+    <p><small>Saludos!</small></p>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Quibusdam, expedita quasi saepe minus
+        obcaecati<br>  porro aliquam at blanditiis eius quod mollitia et nam <wbr> dignissimos maiores <span> ratione atque facere corrupti?</span>
+    </p>
+
+    <time>29/08/2021</time>
+    <time>08:38</time>
+    <time>29/08/2021 18:00:00</time>
+    <!-- estas se usan para dar estilo pero no son necesarias es mejor hacerlo directamente con CSS -->
+    <p>
+        <i>Italic</i>
+        <b>bold</b>
+        <u>Underline</u>
+    </p>
+
+    <p>4 elevado al cuadrado es 4 <sup>2</sup></p>  
+    <p>agua oxigenada es H<sub>2</sub>O</p>
+    
+    <q cite="https://es.wikipedia.org/wiki/Guerras_civiles_de_la_Tetrarqu%C3%ADa">
+        Las guerras civiles de la Tetrarquía fueron una serie de conflictos
+    </q>
+    <pre>
+        <code>
+            aca     representa      codigo
+                se              el          PRE
+        </code>
+    </pre>
+    <p>la etiqueta<code> &#60;h1&#62; </code> se usa para representar titulos de primer nivel &</p>
+    <footer>
+        Footer
+    </footer>
+</body>
+
+</html>
